@@ -1,15 +1,19 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+
+using UnityEngine;
+
 internal class VarsInternal
 {
 	private static string s_clientConfig = "client.config";
 	private Dictionary<string, string> s_vars = new Dictionary<string, string>();
 	private static VarsInternal s_instance = new VarsInternal();
 	private VarsInternal()
-	{
+    {
 		if (!FileUtils.ParseConfigFile(VarsInternal.s_clientConfig, new FileUtils.ConfigFileEntryParseCallback(this.OnConfigFileEntryParsed)))
 		{
+            // if the file is not exist, create it.
 			File.OpenWrite(VarsInternal.s_clientConfig);
 		}
 	}

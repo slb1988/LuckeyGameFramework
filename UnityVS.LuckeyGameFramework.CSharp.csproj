@@ -91,6 +91,7 @@
     <Compile Include="Assets\Scripts\Utils\EnumUtils.cs" />
     <Compile Include="Assets\Scripts\Utils\FileUtils.cs" />
     <Compile Include="Assets\Scripts\Utils\MemUtils.cs" />
+    <Compile Include="Assets\UnitTest\ReadConfigTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2010\UnityVS.CSharp.targets" />
 </Project>
